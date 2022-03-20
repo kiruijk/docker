@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Desctription: Automates installation of Docker in Centos Linux.
+#Description: Automates installation of Docker in Centos Linux.
 #Author: James K
 #Date: March 20, 2022
 
