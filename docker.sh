@@ -7,17 +7,26 @@
 #Clean the system i.e. removing old versions of docker that may be installed
 echo "Cleaning the system...."
 sleep 2
-sudo yum remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
 
 #Set up docker repository
 echo "Setting up docker repository...."
 sudo yum install -y yum-utils
-sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repoep 2
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
 
 #Install docker engine
 echo "Installing the latest version of docker engine...."
 sleep 2
-sudo yum install docker-ce docker-ce-cli containerd.io
+sudo yum install docker-ce docker-ce-cli containerd.io -y
 
 if [ $? -ne 0 ]
 then
