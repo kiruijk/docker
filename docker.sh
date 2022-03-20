@@ -11,7 +11,7 @@ sudo yum remove docker docker-client docker-client-latest docker-common docker-l
 
 #Set up docker repository
 echo "Setting up docker repository...."
-slesudo yum install -y yum-utils
+sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repoep 2
 
 #Install docker engine
